@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatMenuModule} from '@angular/material/menu';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -9,6 +10,8 @@ import {MatMenuModule} from '@angular/material/menu';
 })
 export class MenuComponent implements OnInit {
 
+  public navbarCollapsed = true;
+  
   constructor() { }
 
   ngOnInit() {

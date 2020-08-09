@@ -2,13 +2,15 @@
         <!-- <img src="../../assets/Logo.png" class="brand-img"> -->
     <nav class="navbar navbar-expand-sm navbar-light ">
         <!-- style="background-color: #FF5733" -->
-        <div><a href="https://www.bgmst.org" class="navbar-brand font-weight-bold" >
+        <div class="navbar-brand font-weight-bold" >
             <!-- <img src="../../assets/BGMSTLOGO.png" width="500px" class="brand-img"> -->
             <img src="../../assets/Logo.png" class="brand-img">
-        </a>
         </div>
-
-        <ul class="navbar-nav navbar-collapse justify-content-middle">
+        <button class="navbar-toggler" type="button" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" [ngbCollapse]="navbarCollapsed" id="navbarSupportedContent"> 
+        <ul class="navbar-nav navbar-collapse">
             <li><a class="nav-link font-weight-bold" routerLink="/home">Home</a></li>
             <span class="font-weight-bold">|</span>
             <li><a class="nav-link font-weight-bold" routerLink="/ourvision">Our Vision</a></li>
@@ -35,6 +37,7 @@
                  <!-- <li><a *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li> -->
                 <!-- <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li> -->
         </ul>
+    </div>
     </nav>
     <hr style="border: 2px solid #FF6E33; border-radius: 5px;">
     <!-- <hr style="border: 2px solid #E3651D; border-radius: 5px;"> -->
