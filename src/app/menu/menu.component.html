@@ -1,0 +1,41 @@
+<header>
+        <!-- <img src="../../assets/Logo.png" class="brand-img"> -->
+    <nav class="navbar navbar-expand-sm navbar-light ">
+        <!-- style="background-color: #FF5733" -->
+        <div><a href="https://www.bgmst.org" class="navbar-brand font-weight-bold" >
+            <!-- <img src="../../assets/BGMSTLOGO.png" width="500px" class="brand-img"> -->
+            <img src="../../assets/Logo.png" class="brand-img">
+        </a>
+        </div>
+
+        <ul class="navbar-nav navbar-collapse justify-content-middle">
+            <li><a class="nav-link font-weight-bold" routerLink="/home">Home</a></li>
+            <span class="font-weight-bold">|</span>
+            <li><a class="nav-link font-weight-bold" routerLink="/ourvision">Our Vision</a></li>
+            <span class="font-weight-bold">|</span>
+            <li><a class="nav-link font-weight-bold" routerLink="/events">Events</a></li>
+            <span class="font-weight-bold">|</span>
+            <li><a class="nav-link font-weight-bold" routerLink="/members">Members</a></li>
+            <span class="font-weight-bold">|</span>
+            <li><a class="nav-link font-weight-bold" routerLink="/contactus">Contact Us</a></li>
+           
+            <!-- <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/todos" class="nav-link">Todos</a></li> -->
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+                
+            <li><a class="nav-link btn font-weight-bold bg-light" style="-webkit-text-fill-color: #FF6E33;" routerLink="/login" >Member's Login</a></li>
+            <li><a class="nav-link btn font-weight-bold bg-light" style="-webkit-text-fill-color: #FF6E33;" routerLink="/register" target="_blank">Registration</a></li>
+                <li><form class="form-inline my-2 my-lg-0" style="margin-right:6px">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn"  type="submit"><img src="./../../assets/search-icon.svg" alt="Search"></button>
+                      </form></li>
+                      
+                      <li><a href="https://www.facebook.com/BGMST.org" target="_blank"><img src="./../../assets/facebook.svg" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com/bgmst.org2018/" target="_blank"><img src="./../../assets/instagram.svg" alt="Instagram"></a></li>
+                 <!-- <li><a *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li> -->
+                <!-- <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li> -->
+        </ul>
+    </nav>
+    <hr style="border: 2px solid #FF6E33; border-radius: 5px;">
+    <!-- <hr style="border: 2px solid #E3651D; border-radius: 5px;"> -->
+</header>

@@ -1,0 +1,12 @@
+.brand-img{
+    height: 100px;
+    width:  150px;
+    /* border-radius: 50%; */
+}
+
+.blink {
+    -webkit-animation: blink 1s step-end infinite;
+            animation: blink 1s step-end infinite;
+}
+@-webkit-keyframes blink { 50% { visibility: hidden; }}
+        @keyframes blink { 50% { visibility: hidden; }}
