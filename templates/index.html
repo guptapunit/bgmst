@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story to Reel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Story to Reel Generator</h1>
+
+        <div class="story-input">
+            <h2>Enter Your Story</h2>
+            <textarea id="story" placeholder="Type or paste your story here..."></textarea>
+        </div>
+
+        <div class="api-config">
+            <h2>API Configuration</h2>
+            <label for="apiKey">API Key:</label>
+            <input type="text" id="apiKey" name="apiKey" placeholder="Enter your API key">
+            <p><small>API keys are stored in your browser's local storage for convenience. Do not use this on shared computers.</small></p>
+
+            <label for="apiProvider">API Provider:</label>
+            <select id="apiProvider" name="apiProvider">
+                <option value="">--Select Provider--</option>
+                <option value="OpenAI">OpenAI</option>
+                <option value="GoogleAI">GoogleAI</option>
+                {_ A_N_Y _O_T_H_E_R _P_R_O_V_I_D_E_R_S _W_E _S_U_P_P_O_R_T _}
+            </select>
+        </div>
+
+        <button id="generateBtn">Generate Video</button>
+        <div id="loadingIndicator" style="display:none;">Processing... please wait.</div>
+        <div id="errorDisplay" style="color:red;"></div>
+
+        <div class="video-output">
+            <h2>Generated Reel</h2>
+            <div class="video-placeholder" id="videoPlaceholder">
+                Your generated video will appear here.
+            </div>
+            <video id="finalVideo" controls width="560" style="display:none; margin-top:10px;"></video>
+            <br>
+            <a id="downloadLink" href="#" style="display:none; margin-top:10px;">Download Video</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>
